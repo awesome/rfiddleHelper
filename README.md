@@ -3,8 +3,8 @@ rfiddleHelper
 
 A helper JQuery script to convert the pre tags in your blog to r fiddles.
 
-all &lt;pre class=&quot;rfiddle&quot;&gt;&lt;/pre&gt; tags will be replaced with the non-interactive fiddle
-all &lt;pre class=&quot;rfiddle-interactive&quot;&gt;&lt;/pre&gt; tags will be replaced with the interactive fiddle.
+All &lt;pre class=&quot;rfiddle&quot;&gt;&lt;/pre&gt; tags will be replaced with the non-interactive fiddle. <br />
+All &lt;pre class=&quot;rfiddle-interactive&quot;&gt;&lt;/pre&gt; tags will be replaced with the interactive fiddle.
 
 
 Dependency
