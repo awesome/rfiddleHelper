@@ -14,4 +14,4 @@ This script depends on JQuery.
 
 Installation
 =============
-Include this script in your blog, after you have included jquery. For every <code>&lt;pre&gt;</code> tag that you want to conver to a fiddle, you have to add the class "rfiddle" or "rfiddle-interactive".
+Include this script in your blog, after you have included jquery. For every <code>&lt;pre&gt;</code> tag that you want to convert to a fiddle, you have to add the class "rfiddle" or "rfiddle-interactive".
