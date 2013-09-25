@@ -6,7 +6,7 @@ function renderPage(){
     $('pre.rfiddle').each(function(){
         var url = "http://www.r-fiddle.org/#/query/preview?code=";
         var iframe = document.createElement("iframe");
-        var code = $(this).html();
+        var code = $(this).text();
 
 
         iframe.src = url + encodeURIComponent(code);
@@ -20,7 +20,7 @@ function renderPage(){
     $('pre.rfiddle-interactive').each(function(){
         var url = "http://www.r-fiddle.org/#/query/embed?code=";
         var iframe = document.createElement("iframe");
-        var code = $(this).html();
+        var code = $(this).text();
 
 
         iframe.src = url + encodeURIComponent(code);
