@@ -3,29 +3,40 @@ $('document').ready(function(){
 });
 
 function renderPage(){
+    $.fn.inlineStyle = function (prop) {
+        return this.prop("style")[$.camelCase(prop)];
+    };
     $('pre.rfiddle').each(function(){
-        var url = "http://www.r-fiddle.org/#/query/preview?code=";
+        var url = "http://r-fiddle.org/#/query/preview?code=";
         var iframe = document.createElement("iframe");
         var code = $(this).text();
-
+        var height = $(this).inlineStyle('height');
 
         iframe.src = url + encodeURIComponent(code);
         iframe.width ='100%';
-        iframe.height = 19 + 19 * getNumberOfLines(code) + 'px';
+        
+        if(!height)
+           iframe.height = 38 + 19 * getNumberOfLines(code) + 'px';
+        else
+            iframe.height = height;
         iframe.frameBorder='0';
         iframe.allowFullScreen = 'allowfullscreen'
         $(this).replaceWith(iframe);
     });
 
     $('pre.rfiddle-interactive').each(function(){
-        var url = "http://www.r-fiddle.org/#/query/embed?code=";
+        var url = "http://r-fiddle.org/#/query/embed?code=";
         var iframe = document.createElement("iframe");
         var code = $(this).text();
+        var height = $(this).inlineStyle('height');
 
 
         iframe.src = url + encodeURIComponent(code);
         iframe.width ='100%';
-        iframe.height = 85 + 19 + 19 * getNumberOfLines(code) + 'px';
+        if(!height)
+            iframe.height = 85 + 38 + 19 * getNumberOfLines(code) + 'px';
+        else
+            iframe.height = height;
         iframe.frameBorder='0';
         iframe.allowFullScreen = 'allowfullscreen'
         $(this).replaceWith(iframe);
